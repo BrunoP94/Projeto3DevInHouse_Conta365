@@ -1,12 +1,6 @@
-#Projeto Avaliativo 3 - Conta365
-##DEVinBank Pagamentos S.A.
-####Bruno Alberto Pacheco
-
-**Table of Contents**
-
-[TOCM]
-
-[TOC]
+# Projeto Avaliativo 3 - Conta365
+## DEVinBank Pagamentos S.A.
+#### Bruno Alberto Pacheco
 
 ### Introdução
 Este documento tem como objetivo apresentar os detalhes e lógicas do códido desenvolvido para o Projeto Avaliativo 3 - do curso DevInHouse.
@@ -33,7 +27,8 @@ Pasta com as lógicas, descrição de rotas e definições do servidor. As segui
 		
         O arquivo financial.json é padronizado da seguinte forma:
         > [{"id": number ,"userId": number, "financialData":[{"id": number, "price": number, "typesOfExpenses": string, "date": string, "name": string},...]}]
-        O valor de date deve ser no formato: "yyyy-mm-ddThh:mm:ss.sZ"
+        
+	O valor de date deve ser no formato: "yyyy-mm-ddThh:mm:ss.sZ"
 	- routes
 		Pasta que contém a descrição das rotas. Possui versionamento separado na pasta v1. Dentro desta pasta, são separadas as rotas referentes aos endpoints para usuários e para as finanças nos arquivos user.routes e financial.routes respectivamente.
 		Por fim, na pasta routes, existe o arquivo index.js, que agrega e exporta todas as rotas descritas acima.
@@ -127,13 +122,16 @@ Se as informações vierem de maneira correta, as finanças são atualizadas no 
 Abaixo são apresentadas as informações que devem ser enviadas no params, e no arquivo xlsx:
 
 |price|typesOfExpenses|date|name|
-| :------------: |
+| :------------: | :------------: | :------------: | :------------: |
 |49,90|jantar|2021-01-21T12:00:13.908Z|pedido por delivery|
+
 Os valores devem estar no formato:
 
 |price|typesOfExpenses|date|name|
-| :------------: |
-|number|string|string|string|
+| :------------: | :------------: | :------------: | :------------: |
+|number|string|formato date, salvo como string|string|
+
+Existe disponível na pasta database, um arquivo xlsx com essa formatação.
 
 Params:
 ```
